@@ -7,8 +7,8 @@
               <div class="col-lg-6">
                   <div class="header-widget">
                       <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
-                          <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-phone mr-1"></i><a href="tel:+4407876617836"> (+44) 787 661 7836</a></li>
-                          <li class="d-flex align-items-center"><i class="la la-envelope-o mr-1"></i><a href="mailto:admin@projectsaveng.org"> admin@projectsaveng.org</a></li>
+                          <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-phone mr-1"></i><a href="tel:+2348188209063"> (+234) 8188209063</a></li>
+                          <li class="d-flex align-items-center"><i class="la la-envelope-o mr-1"></i><a href="mailto:asom@projectsaveng.org"> asom@projectsaveng.org</a></li>
                       </ul>
                   </div><!-- end header-widget -->
               </div><!-- end col-lg-6 -->

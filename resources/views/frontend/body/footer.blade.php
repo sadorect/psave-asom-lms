@@ -7,8 +7,8 @@
                       <img src="{{ asset('upload/no_image.jpg') }}" width="80px" height="80px" alt="footer logo" class="footer__logo">
                   </a>
                   <ul class="generic-list-item pt-4">
-                      <li><a href="tel:+44 787 661 7836">+44 787 661 7836</a></li>
-                      <li><a href="mailto:admin@projectsaveng.org">admin@projectsaveng.org</a></li>
+                      <li><a href="tel:+2348188209063">+234 8188209063</a></li>
+                      <li><a href="mailto:asom@projectsaveng.org">asom@projectsaveng.org</a></li>
                       <li></li>
                   </ul>
                   <h3 class="fs-20 font-weight-semi-bold pt-4 pb-2">We are on</h3>
