@@ -14,7 +14,7 @@
           </div>
           <ul class="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
               <li><a href="index.html">Home</a></li>
-              <li>Pages</li>
+             
               <li>Login</li>
           </ul>
       </div><!-- end breadcrumb-content -->
@@ -76,13 +76,14 @@
                           <div class="btn-box">
                               <div class="d-flex align-items-center justify-content-between pb-4">
                                   <div class="custom-control custom-checkbox fs-15">
-                                      <input type="checkbox" class="custom-control-input" id="rememberMeCheckbox" required>
+                                      <input type="checkbox" class="custom-control-input" id="rememberMeCheckbox" >
                                       <label class="custom-control-label custom--control-label" for="rememberMeCheckbox">Remember Me</label>
                                   </div><!-- end custom-control -->
-                                  <a href="recover.html" class="btn-text">Forgot my password?</a>
+                                  <a href="" class="btn-text">Forgot my password?</a>
                               </div>
                               <button class="btn theme-btn" type="submit">Login Account <i class="la la-arrow-right icon ml-1"></i></button>
-                              <p class="fs-14 pt-2">Don't have an account? <a href="sign-up.html" class="text-color hover-underline">Register</a></p>
+                    <p class="fs-14 pt-2">Don't have an account? <a href="                               
+                                {{route('register')}}" class="text-color hover-underline">Register</a></p>
                           </div><!-- end btn-box -->
                       </form>
                   </div><!-- end card-body -->
