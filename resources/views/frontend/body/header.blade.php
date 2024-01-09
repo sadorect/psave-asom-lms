@@ -77,7 +77,7 @@
                   </div><!-- end col-lg-2 -->
                   <div class="col-lg-10">
                       <div class="menu-wrapper">
-                          <div class="menu-category">
+                          <!--div class="menu-category">
                               <ul>
                                   <li>
                                       <a href="#">Categories <i class="la la-angle-down fs-12"></i></a>
@@ -108,7 +108,7 @@
                                       </ul>
                                   </li>
                               </ul>
-                          </div><!-- end menu-category -->
+                          </div--><!-- end menu-category -->
                           <form method="post">
                               <div class="form-group mb-0">
                                   <input class="form-control form--control pl-3" type="text" name="search" placeholder="Search for anything">
@@ -129,10 +129,7 @@
                                       <a href="#">Student <i class="la la-angle-down fs-12"></i></a>
                                       
                                   </li>
-                                  <li class="mega-menu-has">
-                                      <a href="#">Pages <i class="la la-angle-down fs-12"></i></a>
-                                      
-                                  </li>
+                                  
                                   <li>
                                       <a href="#">Blog <i class="la la-angle-down fs-12"></i></a>
                                       
@@ -146,17 +143,17 @@
                                           <i class="la la-shopping-cart"></i>
                                           <span class="product-count">2</span>
                                       </p>
-                                      <ul class="cart-dropdown-menu">
+                                      <!--ul class="cart-dropdown-menu">
                                           
                                           <li>
                                               <a href="" class="btn theme-btn w-100">Got to cart <i class="la la-arrow-right icon ml-1"></i></a>
                                           </li>
-                                      </ul>
+                                      </ul-->
                                   </li>
                               </ul>
                           </div><!-- end shop-cart -->
                           <div class="nav-right-button">
-                              <a href="" class="btn theme-btn d-none d-lg-inline-block"><i class="la la-user-plus mr-1"></i> Admission</a>
+                              <a href="{{route('register')}}" class="btn theme-btn d-none d-lg-inline-block"><i class="la la-user-plus mr-1"></i> Admission</a>
                           </div><!-- end nav-right-button -->
                       </div><!-- end menu-wrapper -->
                   </div><!-- end col-lg-10 -->
