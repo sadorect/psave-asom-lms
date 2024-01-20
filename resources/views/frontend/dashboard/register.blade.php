@@ -73,7 +73,7 @@
                           <div class="input-box">
                               <label class="label-text">Email Address</label>
                               <div class="form-group">
-                                  <input class="form-control form--control" id="email" type="email" name="email" placeholder="Enter email address" value="{{ old('email')}}">
+                                  <input class="form-control form--control @error('email') is-invalid @enderror" id="email" type="email" name="email" placeholder="Enter email address" value="{{ old('email')}}">
                                   <span class="la la-envelope input-icon"></span>
                               </div>
                               @error('email')

@@ -56,6 +56,7 @@ Route::get('/admin/change/password', [AdminController::class, 'adminChangePasswo
 Route::post('/admin/update/password', [AdminController::class, 'adminUpdatePassword'])->name('admin.update.password');
 
 
+
 Route::controller(CategoryController::class)->group(function(){
 
     Route::get('/all/category', 'AllCategory')->name('all.category');
@@ -64,6 +65,9 @@ Route::controller(CategoryController::class)->group(function(){
 
 
 }); // admin middleware
+Route::get('/become/instructor', [AdminController::class, 'becomeInstructor'])->name('become.instructor');
+Route::post('/become/instructor', [AdminController::class, 'instructorRegister'])->name('instructor.register');
+
 
 Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin.login');//display admin login page
 Route::get('/admin/login', [AdminController::class, 'adminLogin'])->name('admin');//display admin login page

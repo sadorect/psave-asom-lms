@@ -22,7 +22,13 @@ class InstructorController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/instructor/login');
+        $notification = array(
+            'message' => 'You have logged out successfully',
+            'alert-type' => 'success'
+          ); 
+          return redirect()->route('instructor.login')->with($notification);
+    
+        
     }
 
     public function instructorLogin(){
