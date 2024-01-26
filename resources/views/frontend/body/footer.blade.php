@@ -44,6 +44,8 @@
                       <li><a href="#">Bible Introduction</a></li>
                       <li><a href="#">Biblical Counselling</a></li> 
                       <li><a href="#">Church Planting and Evangelism</a></li> 
+                      <li><a href="#">Ministry Vitals</a></li> 
+                      <li><a href="#">ASOM Recharge</a></li> 
                   </ul>
               </div><!-- end footer-item -->
           </div><!-- end col-lg-3 -->

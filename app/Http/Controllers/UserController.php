@@ -13,6 +13,10 @@ class UserController extends Controller
         return view('frontend.index');
     }
 
+    public function showCourses() {
+        return view('frontend.dashboard.courses');
+    }
+
     public function userLogout(Request $request)
     {
         Auth::guard('web')->logout();

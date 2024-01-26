@@ -31,6 +31,7 @@ Route::middleware('auth', 'roles:student')->group(function () {
     Route::get('/show/user/profile', [UserController::class, 'showProfile'])->name('show.user.profile');
     Route::post('/update/user/profile', [UserController::class, 'updateUserProfile'])->name('update.user.profile');
     Route::post('/update/user/password', [UserController::class, 'updateUserPassword'])->name('update.user.password');
+    Route::get('/show/courses', [UserController::class, 'showCourses'])->name('show.courses');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
