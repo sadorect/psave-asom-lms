@@ -65,7 +65,20 @@ Route::controller(CategoryController::class)->group(function(){
 });
 
 
+//Instructor Management Segment //
+
+Route::controller(AdminController::class)->group(function(){
+
+    Route::get('/all/instructors', 'AllInstructors')->name('all.instructors');
+    Route::post('/update/user/status', 'updateUserStatus')->name('update.user.status');
+
+    Route::get('/all/students', 'AllStudents')->name('all.students');
+
+});
+
 }); // admin middleware
+
+
 Route::get('/become/instructor', [AdminController::class, 'becomeInstructor'])->name('become.instructor');
 Route::post('/become/instructor', [AdminController::class, 'instructorRegister'])->name('instructor.register');
 

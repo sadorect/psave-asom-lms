@@ -118,22 +118,35 @@
                           <nav class="main-menu">
                               <ul>
                                   <li>
-                                      <a href="#">Home <i class="la la-angle-down fs-12"></i></a>
+                                      <a href="#">Home </a>
                                       
                                   </li>
                                   <li>
-                                      <a href="#">Courses <i class="la la-angle-down fs-12"></i></a>
+                                    <a href="#">About </i></a>
+                                    
+                                </li>
+                                  <li>
+                                      <a href="#">Devotionals </a>
                                       
                                   </li>
                                   <li>
-                                      <a href="#">Student <i class="la la-angle-down fs-12"></i></a>
+                                      <a href="#">ASOM </i></a>
                                       
                                   </li>
                                   
                                   <li>
-                                      <a href="#">Blog <i class="la la-angle-down fs-12"></i></a>
+                                      <a href="#">FAQs <i class="la la-angle-down fs-12 hide-me"></i></a>
                                       
                                   </li>
+
+                                  <li>
+                                    <a href="#">Contact </i></a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#">Donate </i></a>
+                                    
+                                </li>
                               </ul><!-- end ul -->
                           </nav><!-- end main-menu -->
                           <div class="shop-cart mr-4">

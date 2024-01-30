@@ -1,3 +1,8 @@
+@php
+    $id = Auth::user()->id;
+    $instructorId = App\Models\User::find($id);
+    $status = $instructorId->status;
+@endphp
 
 
 <div class="sidebar-wrapper" data-simplebar="true">
@@ -21,6 +26,10 @@
       </a>
      
     </li>
+
+    @if ($status === '1')
+        
+    
     <li>
       <a href="javascript:;" class="has-arrow">
         <div class="parent-icon"><i class="bx bx-category"></i>
@@ -104,6 +113,9 @@
         </li>
       </ul>
     </li>
+    @else
+
+    @endif
     <li>
       <a href="https://codervent.com/rocker/documentation/index.html" target="_blank">
         <div class="parent-icon"><i class="bx bx-folder"></i>

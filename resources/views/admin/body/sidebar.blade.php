@@ -28,9 +28,24 @@
         <div class="menu-title">Manage Instructors</div>
       </a>
       <ul>
-        <li> <a href="{{ route('all.category')}}"><i class='bx bx-radio-circle'></i>All Category</a>
+        <li> <a href="{{ route('all.instructors')}}"><i class='bx bx-radio-circle'></i>All Instructor</a>
         </li>
-        <li> <a href=""><i class='bx bx-radio-circle'></i>Add Category</a>
+        <li> <a href=""><i class='bx bx-radio-circle'></i>Add Instructor</a>
+        </li>
+        
+      </ul>
+    </li>
+
+    <li>
+      <a href="javascript:;" class="has-arrow">
+        <div class="parent-icon"><i class='bx bx-cart'></i>
+        </div>
+        <div class="menu-title">Manage Students</div>
+      </a>
+      <ul>
+        <li> <a href="{{ route('all.students')}}"><i class='bx bx-radio-circle'></i>All Students</a>
+        </li>
+        <li> <a href=""><i class='bx bx-radio-circle'></i>Add Student</a>
         </li>
         
       </ul>

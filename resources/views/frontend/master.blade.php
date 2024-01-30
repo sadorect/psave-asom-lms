@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="{{ asset('frontend/asset/css/tooltipster.bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/asset/css/style.css') }}">
     <!-- end inject -->
+    <style>
+        .hide-me {
+        display: none;
+    }
+    </style>
 </head>
 <body>
 

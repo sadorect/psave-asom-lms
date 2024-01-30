@@ -101,6 +101,12 @@ class AdminController extends Controller
         return view('frontend.instructor.register_instructor');
     }
 
+    public function allInstructors(){
+        $allInstructors = User::where('role','instructor')->latest()->get();
+
+        return view('admin.backend.instructors.all_instructors', compact('allInstructors'));
+    }
+
     public function instructorRegister(Request $request){
 
        $request->validate([
@@ -126,5 +132,26 @@ class AdminController extends Controller
       ); 
       return redirect()->route('instructor.login')->with($notification);
 
+    }
+
+
+    public function allStudents(){
+        $allStudents = User::where('role','student')->latest()->get();
+
+        return view('admin.backend.students.all_students', compact('allStudents'));
+    }
+
+    public function updateUserStatus(Request $request){
+        $userId = $request->input('user_id');
+        $isChecked = $request->input('is_checked', 0);
+
+        $user = User::find($userId);
+
+        if($user){
+            $user->status = $isChecked;
+            $user->save();
+        }
+
+        return response()->json(['message' => 'User status updated successfully']);
     }
 }

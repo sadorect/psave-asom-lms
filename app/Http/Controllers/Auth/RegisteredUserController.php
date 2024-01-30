@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
+use App\Mail\registrationConfirm;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
-use Illuminate\View\View;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
 
 class RegisteredUserController extends Controller
 {
@@ -44,8 +46,28 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+        /// Start send mail to registered User ///
+
+        $sendmail = User::find($user->id);
+
+        $data = [
+            'name' => $sendmail->name,
+            'email'=> $sendmail->email
+        ];
+
+        
+
+        Mail::to($request->email)->send(new registrationConfirm($data));
+        
+
+        $notification = array(
+            'message' => 'Your registration was successful',
+            'alert-type' => 'success'
+          );
+        /// End send mail ///
+
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::HOME)->with($notification);
     }
 }
