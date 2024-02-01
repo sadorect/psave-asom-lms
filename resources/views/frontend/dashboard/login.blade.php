@@ -54,11 +54,14 @@
                               <div class="icon-element icon-element-md fs-25 shadow-sm">Or</div>
                           </div>
                           <div class="input-box">
-                              <label class="label-text">Email or Username</label>
+                              <label class="label-text">Email </label>
                               <div class="form-group">
-                                  <input class="form-control form--control" id="email" type="email" name="email" placeholder="Email or Username">
+                                  <input class="form-control form--control" id="email" @error('email') is-invalid @enderror type="email" name="email" value="{{ old('email')}}" placeholder="Email or Username">
                                   <span class="la la-user input-icon"></span>
                               </div>
+                              @error('email')
+                              <span class="text-danger">{{ $message }}</span>
+                          @enderror
                           </div><!-- end input-box -->
                           <div class="input-box">
                               <label class="label-text">Password</label>
@@ -72,6 +75,9 @@
                                       </button>
                                   </div>
                               </div>
+                              @error('password')
+                              <span class="text-danger">{{ $message }}</span>
+                          @enderror
                           </div><!-- end input-box -->
                           <div class="btn-box">
                               <div class="d-flex align-items-center justify-content-between pb-4">
