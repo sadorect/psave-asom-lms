@@ -43,7 +43,7 @@
                       <h3 class="card-title text-center fs-24 lh-35 pb-4">Login to Your Account!</h3>
                       <div class="section-block"></div>
 
-    <form method="POST" class="pt-4" action="{{ route('login') }}">
+    <form method="POST" class="pt-4" action="{{ route('login.user') }}">
       @csrf
                           <div class="d-flex flex-wrap align-items-center pb-4">
                               <button class="btn theme-btn flex-grow-1 mx-2 mb-2"><i class="la la-google mr-2"></i>Google</button>
