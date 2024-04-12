@@ -27,7 +27,7 @@ class registrationConfirm extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Registration Confirmed for ASOM Season 6',
+            subject: 'Registration Confirmed for ASOM Course',
         );
     }
 

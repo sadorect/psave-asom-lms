@@ -81,7 +81,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME)->with($notification);
+       // return redirect(RouteServiceProvider::HOME)->with($notification);
         }
     }
 
