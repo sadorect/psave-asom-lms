@@ -4,7 +4,10 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+ <!-- HOTSOUP -->
+ <div>
+    <x-text-input id="soup" class="block mt-1 w-full" type="hidden" name="soup" />
+</div>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

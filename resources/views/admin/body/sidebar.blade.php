@@ -67,7 +67,47 @@
       </ul>
     </li>
   
+
+    <li>
+      <a class="has-arrow" href="javascript:;">
+          <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+          </div>
+          <div class="menu-title">Manage Setting</div>
+      </a>
+      <ul>
+          <li> <a href="{{ route('settings.smtp') }}"><i class='bx bx-radio-circle'></i>Manage SMTP</a>
+          </li>
+      </ul>
+  </li>
+
+  <li>
+    <a class="has-arrow" href="javascript:;">
+        <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+        </div>
+        <div class="menu-title">Manage Blog </div>
+    </a>
+    <ul>
+        <li> <a href="{{ route('blog.category') }}"><i class='bx bx-radio-circle'></i>Blog Category </a>
+        </li>
+        <li> <a href="{{ route('blog.devotional') }}"><i class='bx bx-radio-circle'></i>Blog Post</a>
+      
+    </ul>
+</li>
    
+
+<li>
+  <a class="has-arrow" href="javascript:;">
+      <div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
+      </div>
+      <div class="menu-title">Manage Homepage </div>
+  </a>
+  <ul>
+      <li> <a href="{{ route('edit.home') }}"><i class='bx bx-radio-circle'></i>Edit Homepage </a>
+      </li>
+      <li> <a href="{{ route('show.home') }}"><i class='bx bx-radio-circle'></i>Blog Post</a>
+    
+  </ul>
+</li>
     <li class="menu-label">Others</li>
     <li>
       <a class="has-arrow" href="javascript:;">

@@ -5,8 +5,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +23,15 @@ use App\Http\Controllers\Backend\CategoryController;
 */
 
 Route::get('/', [UserController::class, 'index'])->name('index');
+
+Route::get('/about', [UserController::class, 'index'])->name('about.page');
+Route::get('/outreach', [UserController::class, 'index'])->name('outreach.page');
+Route::get('/devotional', [UserController::class, 'index'])->name('devotional.page');
+Route::get('/faq', [UserController::class, 'index'])->name('faq.page');
+Route::get('/events', [UserController::class, 'index'])->name('events');
+Route::get('/contact', [UserController::class, 'index'])->name('contact');
+
+Route::get('/asom', [UserController::class, 'asomHome'])->name('asom');
 
 Route::get('/dashboard', function () {
     return view('frontend.dashboard.index');
@@ -64,6 +76,13 @@ Route::controller(CategoryController::class)->group(function(){
 
 });
 
+Route::controller(HomepageController::class)->group(function(){
+    Route::get('/admin/homepage','showHome')->name('show.home');
+    Route::get('/edit/homepage','editHome')->name('edit.home');
+    Route::post('/update/homepage','storeHomepage')->name('update.home');
+});
+
+
 
 //Instructor Management Segment //
 
@@ -75,6 +94,28 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/all/students', 'AllStudents')->name('all.students');
 
 });
+
+Route::controller(SettingsController::class)->group(function(){
+    Route::get('/settings/smtp','smtpSettings')->name('settings.smtp');
+    Route::post('/update/smtp','smtpUpdate')->name('update.smtp');
+});
+
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/blog/category','AllBlogCategory')->name('blog.category');  
+    Route::post('/blog/category/store','StoreBlogCategory')->name('blog.category.store'); 
+    Route::get('/edit/blog/category/{id}','EditBlogCategory')->name('edit.blog.category'); 
+    Route::post('/blog/category/update','UpdateBlogCategory')->name('blog.category.update'); 
+    Route::get('/delete/blog/category/{id}','DeleteBlogCategory')->name('delete.blog.category'); 
+
+    Route::get('/blog/devotional','allDevotionals')->name('blog.devotional');
+    Route::get('/add/devotional','addDevotional')->name('add.devotional'); 
+    Route::post('/store/devotional','storeDevotional')->name('store.devotional');
+    Route::get('/edit/post/{id}','editDevotional')->name('edit.post');  
+    Route::post('/update/blog/post','updateDevotional')->name('update.devotional');
+    Route::post('/delete/blog/post','deleteDevotional')->name('delete.devotional');
+
+});
+
 
 }); // admin middleware
 

@@ -15,6 +15,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -30,8 +31,20 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
+        /* Validate reCAPTCHA
+        $captcha = new googlerecaptchav3();
+        $response = $captcha->verifyResponse($request->input('g-recaptcha-response'));
+
+        if (!$response->isSuccess()) {
+            // reCAPTCHA validation failed
+            return back()->withErrors(['captcha' => 'Invalid CAPTCHA. Please try again.']);
+        } 
+        */
+        if ($request->soup == '') {
+                  
+        
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -69,5 +82,11 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME)->with($notification);
+        }
     }
+
+    
+
+   
+
 }

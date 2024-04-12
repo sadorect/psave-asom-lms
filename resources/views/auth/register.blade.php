@@ -1,7 +1,14 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
+        @error('captcha')
+        <div>{{ $message }}</div>
+    @enderror
 
+    <!-- HOTSOUP -->
+    <div>
+        <x-text-input id="soup" class="block mt-1 w-full" type="hidden" name="soup" />
+    </div>
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
@@ -43,7 +50,7 @@
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
-
+            <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
             <x-primary-button class="ms-4">
                 {{ __('Register') }}
             </x-primary-button>

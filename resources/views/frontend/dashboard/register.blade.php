@@ -44,7 +44,10 @@
 
                         <form method="POST" class="pt-4" action="{{ route('register.user') }}">
                           @csrf
-                          
+                           <!-- HOTSOUP -->
+ <div>
+    <x-text-input id="soup" class="block mt-1 w-full" type="hidden" name="soup" />
+</div>
                           <div class="input-box">
                               <label class="label-text">Full Name</label>
                               <div class="form-group">
@@ -116,6 +119,7 @@
                                       <a href="" class="text-color hover-underline">privacy policy</a>
                                   </label>
                               </div><!-- end custom-control -->
+                              <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                               <button class="btn theme-btn" type="submit">Register Account <i class="la la-arrow-right icon ml-1"></i></button>
                               <p class="fs-14 pt-2">Already have an account? <a href="{{ route('login') }}" class="text-color hover-underline">Log in</a></p>
                           </div><!-- end btn-box -->

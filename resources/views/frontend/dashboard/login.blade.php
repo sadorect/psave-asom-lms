@@ -53,6 +53,10 @@
                           <div class="text-center pt-3 pb-4">
                               <div class="icon-element icon-element-md fs-25 shadow-sm">Or</div>
                           </div>
+                           <!-- HOTSOUP -->
+ <div>
+    <x-text-input id="soup" class="block mt-1 w-full" type="hidden" name="soup" />
+</div>
                           <div class="input-box">
                               <label class="label-text">Email </label>
                               <div class="form-group">

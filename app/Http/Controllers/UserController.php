@@ -11,6 +11,12 @@ class UserController extends Controller
 {
     public function index() {
         return view('frontend.index');
+        //return view('landing.home');
+    }
+
+
+    public function asomHome() {
+        return view('frontend.index');
     }
 
     public function showCourses() {
