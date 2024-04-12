@@ -70,7 +70,7 @@ class RegisteredUserController extends Controller
 
         
 
-        Mail::to($request->email)->send(new registrationConfirm($data));
+       // Mail::to($request->email)->send(new registrationConfirm($data));
         
 
         $notification = array(
